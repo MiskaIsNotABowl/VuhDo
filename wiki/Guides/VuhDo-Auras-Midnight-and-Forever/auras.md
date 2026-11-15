@@ -148,4 +148,8 @@ If you'd like the color settings of a built-in Group to not apply anymore, simpl
 
 <!--hier fehlt noch alles-->
 
-Order of Precedence:
+<u>Order of Precedence:</u>
+
+Spell-specific settings you make within an aura group in Auras → Groups will take priority over the settings you make for an anchor in Panels → Auras. 
+
+Any settings you make in Panels->Auras will take priority over Colors → Auras.

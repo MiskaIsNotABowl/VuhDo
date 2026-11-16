@@ -7,7 +7,7 @@ Instead, there's the new Aura system. This combines HoTs and Debuffs.
 This will be a (hopefully) quick guide on how this system works and how to set up your things.
 
 ## Table Of Contents <!-- omit in toc -->
-- [TL:DR - Where'd all my settings go?](#tldr---whered-all-my-settings-go)
+- [TL:DR - Where'd all my HoT/Debuff settings go?](#tldr---whered-all-my-hotdebuff-settings-go)
 - [How Auras get displayed: Panels → Auras](#how-auras-get-displayed-panels--auras)
   - [Aura Icon Setup](#aura-icon-setup)
   - [Aura Bar Setup](#aura-bar-setup)
@@ -16,10 +16,11 @@ This will be a (hopefully) quick guide on how this system works and how to set u
   - [Filter-Type Auras](#filter-type-auras)
   - [Bar Colors (Custom, Dispel, Glow)](#bar-colors-custom-dispel-glow)
 - [Global Defaults: Colors → Auras](#global-defaults-colors--auras)
+- [What is that Panels → Private Auras tab?](#what-is-that-panels--private-auras-tab)
 
 
 
-## TL:DR - Where'd all my settings go?
+## TL:DR - Where'd all my HoT/Debuff settings go?
 
 <u>The way you set up Auras:</u>
 - Create a Group in [Auras → Groups](#which-auras-to-track-auras--groups)
@@ -100,6 +101,49 @@ These dropdown menus let you choose exactly how your icons are going to show up.
 <u>Stack Type:</u> Choose if you want stacks to display as numbers or triangles.
 <!-- Didn't Blizz break that? eh, whatever -->
 
+<img src="images/auras-sliders.png" alt="Sliders in Panels→Auras" width="650"/>
+
+<!--![Sliders in Panels→Auras](images/auras-sliders.png)-->
+
+Now for these sliders.
+
+<u>Offset X:</u> Move the anchor point to the right and left, based on your chosen spot from the radio buttons.
+
+<u>Offset Y:</u> Move the anchor point up and down, based on your chosen spot from the radio buttons.
+
+<u>Max Display:</u> Choose how many Auras you want to display on this anchor. This can be helpful when you don't want to see a million debuffs on your frames in PvP.
+
+<u>Max Columns:</u> Choose how many icons will be in one row before your "Wrap" setting kicks in.
+
+<u>Max Rows:</u> <!--who knows honestly-->
+
+<u>Size:</u> Controls the size of your icons. This is relative to the height of your frames, so 40% will equal 40% of the height of your health bar.
+
+<u>Spacing:</u> Controls how much space there is in between icons.
+
+<u>Bar Width/Height:</u> These will be discussed more [in the Aura Bar setup](#aura-bar-setup).
+
+<u>Timer:</u> Customize the font, size and position of timers on your icons.
+
+<u>Stacks:</u> Customize the font, size and position of stack counters (if Stack Type is set to text) on your icons.
+
+<img src="images/auras-tri-state.png" alt="Tri-state buttons in Panels→Auras" width="650"/>
+
+<!--![Tri-state buttons in Panels→Auras](images/auras-tri-state.png)-->
+
+These tri-state buttons are used to override the defaults set in [Colors -> Auras](#global-defaults-colors--auras) per-anchor. What they do is explained in that section. `Global` leaves them to the default set there, whereas `On` or `Off`overrdes this default.
+
+Fixed Slots decides, whether icons stick to the spots they appear in on your frame, or collapse when one expires. To show what this means:
+
+<u>Fixed Slots enabled:</u>
+
+<img src="images/auras-fixed-slots-enabled.png" alt="Icons with Fixed Slots enabled" width="350"/>
+
+<u>Fixed Slots disabled:</u>
+
+<img src="images/auras-fixed-slots-disabled.png" alt="Icons with Fixed Slots disabled" width="350"/>
+
+
 ### Aura Bar Setup
 
 <!--hier fehlt alles-->
@@ -146,10 +190,18 @@ If you'd like the color settings of a built-in Group to not apply anymore, simpl
 
 ## Global Defaults: Colors → Auras
 
-<!--hier fehlt noch alles-->
+<!--hier fehlt noch fast alles-->
 
 <u>Order of Precedence:</u>
 
 Spell-specific settings you make within an aura group in Auras → Groups will take priority over the settings you make for an anchor in Panels → Auras. 
 
 Any settings you make in Panels->Auras will take priority over Colors → Auras.
+
+## What is that Panels → Private Auras tab?
+
+A relic of worse times shaped by guess-based dispels. 
+
+Jokes aside, the only things that show up on there as of S2 of Midnight are some fixates and the soak at the last boss of AoF. Make sure it's set to a reasonable size so you don't get jumpscared by giant fixate icons, or feel free to disable it outright.
+
+What's on there for Forever? You tell me, lol.

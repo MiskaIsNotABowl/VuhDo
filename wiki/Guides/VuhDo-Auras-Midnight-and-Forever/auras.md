@@ -17,6 +17,7 @@ This will be a (hopefully) quick guide on how this system works and how to set u
   - [Bar Colors (Custom, Dispel, Glow)](#bar-colors-custom-dispel-glow)
 - [Global Defaults: Colors → Auras](#global-defaults-colors--auras)
 - [What is that Panels → Private Auras tab?](#what-is-that-panels--private-auras-tab)
+- [Common Setup Examples](#common-setup-examples)
 
 
 
@@ -28,11 +29,13 @@ This will be a (hopefully) quick guide on how this system works and how to set u
 
 The default Aura Groups can't be edited, but you can make copies of them and edit those. Make sure to also update the corresponding anchor in Panels → Auras
 
-<u>There's two types of Aura Groups:</u>
+<u>**There's two types of Aura Groups:**</u>
 
-**List:** Add Auras you want to track by name or SpellID. You can track Buffs on friendly units, and Debuffs on hostile units.
+<u>List:</u> Add Auras you want to track by name or SpellID. You can track Buffs on friendly units, and Debuffs on hostile units.
 
-**Filter:** Use filter conditions to show Groups of Auras. The filters are controlled by Blizzard, the tooltips should give you a general idea of what Blizz says is in there.
+<u>Filter:</u> Use filter conditions to show Groups of Auras. The filters are controlled by Blizzard, the tooltips should give you a general idea of what Blizz says is in there.
+
+Some common setup examples can be found at [the very bottom](#common-setup-examples) of this guide.
 
 
 ## How Auras get displayed: Panels → Auras
@@ -115,7 +118,7 @@ Now for these sliders.
 
 <u>Max Columns:</u> Choose how many icons will be in one row before your "Wrap" setting kicks in.
 
-<u>Max Rows:</u> <!--who knows honestly-->
+<u>Max Rows:</u> If you're using one of the two non-linear Anchors, having more than 9 Auras on one of the anchors won't show all of them by default. Set this to 2 or higher if you'd like to see the 10th icon next to the first, the 11th next to the second, and so on.
 
 <u>Size:</u> Controls the size of your icons. This is relative to the height of your frames, so 40% will equal 40% of the height of your health bar.
 
@@ -146,7 +149,16 @@ Fixed Slots decides, whether icons stick to the spots they appear in on your fra
 
 ### Aura Bar Setup
 
-<!--hier fehlt alles-->
+As mentioned earlier, you can set an Anchor up to display all its Auras as bars.
+
+To do this, choose `Bars` from the `Style`-Dropdown. 
+
+If you want to configure only specific spells to show as bars, make a new anchor for them and create a [List-Type Aura Group](#list-type-auras-add-individual-auras) to anchor here.
+
+Additionally, I recommend checking "Fixed Slots" for this Anchor, so as to not have bars jumping around on your frames.
+
+<!--hier fehlen viele bilder-->
+
 
 ## Which Auras to track: Auras → Groups
 
@@ -156,6 +168,16 @@ Fixed Slots decides, whether icons stick to the spots they appear in on your fra
 ### List-Type Auras: Add individual Auras
 
 First off: Because of Blizzard's restrictions, this only works for Buffs on friendly, and debuffs on hostile units. For debuffs on your party, you'll have to use a [Filter-Type Aura](#filter-type-auras).
+
+<img src="images/groups-list-type.png" alt="A Default List-Type Aura Group" width="650"/>
+
+This is a copy of the default `Restoration Druid HoTs` Group I've created using the "Copy Button".
+
+Above the spell list, to the right you can see the dropdowns for `Type` and `Scope`. `Type` switches the Aura Group between being a Filter-Type or List-Type Aura. `Scope` decides if this Aura Group and its colors, when anchored, should later be shown only on friendly units, hostile units, or on both. This is helpful on focus or target frames in PvP, for example.
+
+
+
+
 
 <!--ehh hier fehlt was-->
 
@@ -205,3 +227,9 @@ A relic of worse times shaped by guess-based dispels.
 Jokes aside, the only things that show up on there as of S2 of Midnight are some fixates and the soak at the last boss of AoF. Make sure it's set to a reasonable size so you don't get jumpscared by giant fixate icons, or feel free to disable it outright.
 
 What's on there for Forever? You tell me, lol.
+
+## Common Setup Examples
+
+These are some examples of groups/common setups for you to just copy the settings from. 
+
+<!--wieso tu ich mir das an-->

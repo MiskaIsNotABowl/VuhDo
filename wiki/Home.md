@@ -4,3 +4,4 @@
 [VuhDo Custom Flags](https://github.com/vuhdo-io/VuhDo/wiki/VuhDo-Custom-Flag-Bouquet-Validators)  
 [VuhDo Options Skinning Guide](https://github.com/vuhdo-io/VuhDo/wiki/VuhDo-Options-Skinning-Guide)  
 [Contributing to the Wiki](https://github.com/vuhdo-io/VuhDo/wiki/Contributing-to-the-Wiki)
+[VuhDo Aura Guide](https://github.com/vuhdo-io/VuhDo/wiki/VuhDo-Auras-Midnight-And-Forever)

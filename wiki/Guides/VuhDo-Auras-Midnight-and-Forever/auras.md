@@ -17,7 +17,7 @@ This will be a (hopefully) quick guide on how this system works and how to set u
   - [Bar Colors (Custom, Dispel, Glow)](#bar-colors-custom-dispel-glow)
 - [Global Defaults: Colors → Auras](#global-defaults-colors--auras)
 - [What is that Panels → Private Auras tab?](#what-is-that-panels--private-auras-tab)
-- [Common Setup Examples](#common-setup-examples)
+- [Common Setup Examples \& Special Cases](#common-setup-examples--special-cases)
 
 
 
@@ -167,19 +167,34 @@ Additionally, I recommend checking "Fixed Slots" for this Anchor, so as to not h
 
 ### List-Type Auras: Add individual Auras
 
-First off: Because of Blizzard's restrictions, this only works for Buffs on friendly, and debuffs on hostile units. For debuffs on your party, you'll have to use a [Filter-Type Aura](#filter-type-auras).
+First off: Because of Blizzard's restrictions, this only works for Buffs on friendly, and Debuffs on hostile units. For debuffs on your party, you'll have to use a [Filter-Type Aura](#filter-type-auras).
 
 <img src="images/groups-list-type.png" alt="A Default List-Type Aura Group" width="650"/>
 
-This is a copy of the default `Restoration Druid HoTs` Group I've created using the "Copy Button".
+This is a copy of the default `Restoration Druid HoTs` Group in WoW Forever I've created using the "Copy Button". (This works the same in Retail, too.)
 
 Above the spell list, to the right you can see the dropdowns for `Type` and `Scope`. `Type` switches the Aura Group between being a Filter-Type or List-Type Aura. `Scope` decides if this Aura Group and its colors, when anchored, should later be shown only on friendly units, hostile units, or on both. This is helpful on focus or target frames in PvP, for example.
 
+Auras will show up on your Anchors in the order you pick here. The first spell in the list will show up in the first position of your anchor. 
 
+You can reorder them using the arrow buttons in the list, or remove them using the X button.
 
+Select a spell you'd like to add from the dropdown menu, or type in its name, then click `Add Spell` to add it to the list. `Add Empty` adds an empty space between Icons on your anchor, which can be useful for [Aura bars](#aura-bar-setup), for example. Additionally, you can add Bouquets from its respective dropdown.
 
+In addition to this, you can see a `Spell` Button in each added Aura's row. This is used to control how individual icons show up.
 
-<!--ehh hier fehlt was-->
+<img src="images/groups-spell-settings.png" alt="A Default List-Type Aura Group" width="650"/>
+
+At the top, you can configure whether you'd like to see this aura when it's applied by you, others, or both. Because of spell ranks, in Forever, there's also a checkbox to always match an aura by name instead of Spell ID, so you don't have to change your Aura Groups every time you learn a new spell. It's checked by default, so you don't have to worry about it usually.
+
+The `Timer Text` section lets you choose if you'd like to see the timer text for this Aura for its full duration, or have it count up instead of down. 
+
+With the `Show Timer` slider, you control from which point on it starts counting down, if neither other option is selected.
+
+You can also choose a color overlay to put on this Aura via `Color Icon`. This will be especially important for [Aura Bars](#aura-bar-setup) later, since it allows you to make different colored Aura Bars. You may also choose a `Glow Icon` effect to show around your icon and customize its color. You can preview both options on the icon as you go.
+
+Below, under `Display Overrides` you can see overrides for the tri-state buttons in [Panels → Auras](#how-auras-get-displayed-panels--auras) and set up how you'd like your Aura icon to behave in its Pandemic window (at about 3-4 seconds left).
+The color selection for the `Pandemic Color` allows you to override the default one set in [Colors → Auras](#global-defaults-colors--auras). 
 
 
 ### Filter-Type Auras
@@ -214,6 +229,8 @@ If you'd like the color settings of a built-in Group to not apply anymore, simpl
 
 <!--hier fehlt noch fast alles-->
 
+What's in these filters is taken care of by Blizzard. In Midnight, they work mostly as you'd expect. In Forever, a lot of things aren't really sorted into categories by Blizz, making debuff filtering a bit of a headache.
+
 <u>Order of Precedence:</u>
 
 Spell-specific settings you make within an aura group in Auras → Groups will take priority over the settings you make for an anchor in Panels → Auras. 
@@ -228,7 +245,7 @@ Jokes aside, the only things that show up on there as of S2 of Midnight are some
 
 What's on there for Forever? You tell me, lol.
 
-## Common Setup Examples
+## Common Setup Examples & Special Cases
 
 These are some examples of groups/common setups for you to just copy the settings from. 
 

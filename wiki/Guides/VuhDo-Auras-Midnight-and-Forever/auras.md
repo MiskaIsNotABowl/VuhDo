@@ -8,13 +8,13 @@ This will be a (hopefully) quick guide on how this system works and how to set u
 
 ## Table Of Contents <!-- omit in toc -->
 - [TL:DR - Where'd all my HoT/Debuff settings go?](#tldr---whered-all-my-hotdebuff-settings-go)
-- [How Auras get displayed: Panels → Auras](#how-auras-get-displayed-panels--auras)
-  - [Aura Icon Setup](#aura-icon-setup)
-  - [Aura Bar Setup](#aura-bar-setup)
 - [Which Auras to track: Auras → Groups](#which-auras-to-track-auras--groups)
   - [List-Type Auras: Add individual Auras](#list-type-auras-add-individual-auras)
   - [Filter-Type Auras](#filter-type-auras)
   - [Bar Colors (Custom, Dispel, Glow)](#bar-colors-custom-dispel-glow)
+- [How Auras get displayed: Panels → Auras](#how-auras-get-displayed-panels--auras)
+  - [Aura Icon Setup](#aura-icon-setup)
+  - [Aura Bar Setup](#aura-bar-setup)
 - [Global Defaults: Colors → Auras](#global-defaults-colors--auras)
 - [What is that Panels → Private Auras tab?](#what-is-that-panels--private-auras-tab)
 - [Common Setup Examples \& Special Cases](#common-setup-examples--special-cases)
@@ -35,7 +35,72 @@ The default Aura Groups can't be edited, but you can make copies of them and edi
 
 <u>Filter:</u> Use filter conditions to show Groups of Auras. The filters are controlled by Blizzard, the tooltips should give you a general idea of what Blizz says is in there.
 
-Some common setup examples can be found at [the very bottom](#common-setup-examples) of this guide.
+Some common setup examples can be found at [the very bottom](#common-setup-examples--special-cases) of this guide.
+
+## Which Auras to track: Auras → Groups
+
+ **None of the premade Groups can be edited**. 
+ To still customize them, select the Aura Group you'd like to use as a base, then click "Copy".  This will copy all settings from the original, but make them editable. You may also give this Group a new name.
+
+### List-Type Auras: Add individual Auras
+
+First off: Because of Blizzard's restrictions, this only works for Buffs on friendly, and Debuffs on hostile units. For debuffs on your party, you'll have to use a [Filter-Type Aura](#filter-type-auras).
+
+<img src="images/groups-list-type.png" alt="A Default List-Type Aura Group" width="650"/>
+
+This is a copy of the default `Restoration Druid HoTs` Group in WoW Forever I've created using the "Copy Button". (This works the same in Retail, too.)
+
+Above the spell list, to the right you can see the dropdowns for `Type` and `Scope`. `Type` switches the Aura Group between being a Filter-Type or List-Type Aura. `Scope` decides if this Aura Group and its colors, when anchored, should later be shown only on friendly units, hostile units, or on both. This is helpful on focus or target frames in PvP, for example.
+
+Auras will show up on your Anchors in the order you pick here. The first spell in the list will show up in the first position of your anchor. 
+
+You can reorder them using the arrow buttons in the list, or remove them using the X button.
+
+Select a spell you'd like to add from the dropdown menu, or type in its name, then click `Add Spell` to add it to the list. `Add Empty` adds an empty space between Icons on your anchor, which can be useful for [Aura bars](#aura-bar-setup), for example. Additionally, you can add Bouquets from its respective dropdown.
+
+In addition to this, you can see a `Spell` Button in each added Aura's row. This is used to control how individual icons show up.
+
+<img src="images/groups-spell-settings.png" alt="A Default List-Type Aura Group" width="650"/>
+
+At the top, you can configure whether you'd like to see this aura when it's applied by you, others, or both. Because of spell ranks, in Forever, there's also a checkbox to always match an aura by name instead of Spell ID, so you don't have to change your Aura Groups every time you learn a new spell. It's checked by default, so you don't have to worry about it usually.
+
+The `Timer Text` section lets you choose if you'd like to see the timer text for this Aura for its full duration, or have it count up instead of down. 
+
+With the `Show Timer` slider, you control from which point on it starts counting down, if neither other option is selected.
+
+You can also choose a color overlay to put on this Aura via `Color Icon`. This will be especially important for [Aura Bars](#aura-bar-setup) later, since it allows you to make different colored Aura Bars. You may also choose a `Glow Icon` effect to show around your icon and customize its color. You can preview both options on the icon as you go.
+
+Below, under `Display Overrides` you can see overrides for the tri-state buttons in [Panels → Auras](#how-auras-get-displayed-panels--auras) and set up how you'd like your Aura icon to behave in its Pandemic window (at about 3-4 seconds left).
+The color selection for the `Pandemic Color` allows you to override the default one set in [Colors → Auras](#global-defaults-colors--auras). 
+
+
+### Filter-Type Auras
+
+<!--ehh hier fehlt alles-->
+
+ ### Bar Colors (Custom, Dispel, Glow)
+
+ You can then set a **Color Type** for an Aura Group. The choices here are *Custom* and *Debuff*. Additionally, you can configure a bar glow, or a sound that plays, when any of the Auras in this Group are applied.
+
+
+**Custom:** You may set a custom color for when **any** of the Auras in this Group are active on the player. You can click the example bar shown to change the Colors for both Text and the bar itself for this Aura Group. 
+Coloring a bar, when, for example, specifically "Atonement" is on a bar is currently not possible.
+ 
+**Dispel:** This uses the Colors configured under Colors>States. The best use for it is on a debuff-based Group, like "Relevant Debuffs".
+ 
+Changing these Color settings applies the colors **regardless** of whether or not the Aura Group is anchored to any Panels (Anchors will be explained [here](#how-Auras-get-displayed-panels--Auras)). This is useful for when you want your frames to turn certain colors, but not show any icons.
+
+The priority slider controls which Aura Group's color settings take precedence over other Aura Groups. The lower the number, the higher the priority.
+
+Example:
+- Aura Group 1 has debuff colors enabled and a priority of 50
+- Aura Group 2 has custom colors enabled and a priority of 10
+
+When Auras from both Groups are present, the custom color of Aura Group 2 takes priority
+ 
+*Note that the main default Aura a lot of people will be using to track Debuffs, **"Dispellable Debuffs", already has its bar colors configured** to the "Dispel"-Colors, so **you won't need to do this manually.***
+ 
+If you'd like the color settings of a built-in Group to not apply anymore, simply uncheck the "Enable" Box at the top of the Aura Group. This will also disable this group for selection in Panels → Auras. If you'd like to keep icons without colors, create a copy, disable colors for this copy and anchor it instead.
 
 
 ## How Auras get displayed: Panels → Auras
@@ -159,71 +224,6 @@ Additionally, I recommend checking "Fixed Slots" for this Anchor, so as to not h
 
 <!--hier fehlen viele bilder-->
 
-
-## Which Auras to track: Auras → Groups
-
- **None of the premade Groups can be edited**. 
- To still customize them, select the Aura Group you'd like to use as a base, then click "Copy".  This will copy all settings from the original, but make them editable. You may also give this Group a new name.
-
-### List-Type Auras: Add individual Auras
-
-First off: Because of Blizzard's restrictions, this only works for Buffs on friendly, and Debuffs on hostile units. For debuffs on your party, you'll have to use a [Filter-Type Aura](#filter-type-auras).
-
-<img src="images/groups-list-type.png" alt="A Default List-Type Aura Group" width="650"/>
-
-This is a copy of the default `Restoration Druid HoTs` Group in WoW Forever I've created using the "Copy Button". (This works the same in Retail, too.)
-
-Above the spell list, to the right you can see the dropdowns for `Type` and `Scope`. `Type` switches the Aura Group between being a Filter-Type or List-Type Aura. `Scope` decides if this Aura Group and its colors, when anchored, should later be shown only on friendly units, hostile units, or on both. This is helpful on focus or target frames in PvP, for example.
-
-Auras will show up on your Anchors in the order you pick here. The first spell in the list will show up in the first position of your anchor. 
-
-You can reorder them using the arrow buttons in the list, or remove them using the X button.
-
-Select a spell you'd like to add from the dropdown menu, or type in its name, then click `Add Spell` to add it to the list. `Add Empty` adds an empty space between Icons on your anchor, which can be useful for [Aura bars](#aura-bar-setup), for example. Additionally, you can add Bouquets from its respective dropdown.
-
-In addition to this, you can see a `Spell` Button in each added Aura's row. This is used to control how individual icons show up.
-
-<img src="images/groups-spell-settings.png" alt="A Default List-Type Aura Group" width="650"/>
-
-At the top, you can configure whether you'd like to see this aura when it's applied by you, others, or both. Because of spell ranks, in Forever, there's also a checkbox to always match an aura by name instead of Spell ID, so you don't have to change your Aura Groups every time you learn a new spell. It's checked by default, so you don't have to worry about it usually.
-
-The `Timer Text` section lets you choose if you'd like to see the timer text for this Aura for its full duration, or have it count up instead of down. 
-
-With the `Show Timer` slider, you control from which point on it starts counting down, if neither other option is selected.
-
-You can also choose a color overlay to put on this Aura via `Color Icon`. This will be especially important for [Aura Bars](#aura-bar-setup) later, since it allows you to make different colored Aura Bars. You may also choose a `Glow Icon` effect to show around your icon and customize its color. You can preview both options on the icon as you go.
-
-Below, under `Display Overrides` you can see overrides for the tri-state buttons in [Panels → Auras](#how-auras-get-displayed-panels--auras) and set up how you'd like your Aura icon to behave in its Pandemic window (at about 3-4 seconds left).
-The color selection for the `Pandemic Color` allows you to override the default one set in [Colors → Auras](#global-defaults-colors--auras). 
-
-
-### Filter-Type Auras
-
-<!--ehh hier fehlt alles-->
-
- ### Bar Colors (Custom, Dispel, Glow)
-
- You can then set a **Color Type** for an Aura Group. The choices here are *Custom* and *Debuff*. Additionally, you can configure a bar glow, or a sound that plays, when any of the Auras in this Group are applied.
-
-
-**Custom:** You may set a custom color for when **any** of the Auras in this Group are active on the player. You can click the example bar shown to change the Colors for both Text and the bar itself for this Aura Group. 
-Coloring a bar, when, for example, specifically "Atonement" is on a bar is currently not possible.
- 
-**Dispel:** This uses the Colors configured under Colors>States. The best use for it is on a debuff-based Group, like "Relevant Debuffs".
- 
-Changing these Color settings applies the colors **regardless** of whether or not the Aura Group is anchored to any Panels (Anchors will be explained [here](#how-Auras-get-displayed-panels--Auras)). This is useful for when you want your frames to turn certain colors, but not show any icons.
-
-The priority slider controls which Aura Group's color settings take precedence over other Aura Groups. The lower the number, the higher the priority.
-
-Example:
-- Aura Group 1 has debuff colors enabled and a priority of 50
-- Aura Group 2 has custom colors enabled and a priority of 10
-
-When Auras from both Groups are present, the custom color of Aura Group 2 takes priority
- 
-*Note that the main default Aura a lot of people will be using to track Debuffs, **"Dispellable Debuffs", already has its bar colors configured** to the "Dispel"-Colors, so **you won't need to do this manually.***
- 
-If you'd like the color settings of a built-in Group to not apply anymore, simply uncheck the "Enable" Box at the top of the Aura Group. This will also disable this group for selection in Panels → Auras. If you'd like to keep icons without colors, create a copy, disable colors for this copy and anchor it instead.
 
 ## Global Defaults: Colors → Auras
 

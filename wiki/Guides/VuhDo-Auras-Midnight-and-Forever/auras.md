@@ -78,6 +78,8 @@ The color selection for the `Pandemic Color` allows you to override the default 
 
 <!--ehh hier fehlt alles-->
 
+What's in these filters is taken care of by Blizzard. In Midnight, they work mostly as you'd expect. In Forever, a lot of things aren't really sorted into categories by Blizz, making debuff filtering a bit of a headache.
+
  ### Bar Colors (Custom, Dispel, Glow)
 
  You can then set a **Color Type** for an Aura Group. The choices here are *Custom* and *Debuff*. Additionally, you can configure a bar glow, or a sound that plays, when any of the Auras in this Group are applied.
@@ -218,18 +220,47 @@ As mentioned earlier, you can set an Anchor up to display all its Auras as bars.
 
 To do this, choose `Bars` from the `Style`-Dropdown. 
 
-If you want to configure only specific spells to show as bars, make a new anchor for them and create a [List-Type Aura Group](#list-type-auras-add-individual-auras) to anchor here.
+If you want to configure only specific spells to show as bars, make a new anchor for them and create a [List-Type Aura Group](#list-type-auras-add-individual-auras) to anchor here. This also lets you choose custom colors for each spell's bar.
+
+If you prefer your bars with no icons, choose `No Icon` from the `Icon Type`-Dropdown.
 
 Additionally, I recommend checking "Fixed Slots" for this Anchor, so as to not have bars jumping around on your frames.
 
-<!--hier fehlen viele bilder-->
+For this guide, I'll use a filter-type Aura Group with icon colors set to pink for Rejuvenation and Green for Regrowth, which overwrite my default bar color (which is set in [Colors → Auras](#global-defaults-colors--auras)).
+
+When you first turn your anchor into bars, you might notice that the sizing is all out of whack. This is because for bars, the `Size` slider behaves differently. For horizontal bars, the icon size is controlled by the `Bar Height`-slider, for vertical bars, `Bar Width` controls this.
+
+Okay, now to customize how they look. The easiest setup is to have the first one appear at the top of the health bar, with the second one underneath it.
+
+For this, choose an anchor point towards the top of your frame, and set `Growth` to `Down`, creating something like this:
+
+<img src="images/auras-bars-basic.png" alt="Basic Bar-style anchor setup" width="250"/>
+
+<img src="images/auras-size-horizontal.png" alt="Size for non-vertical bars is tied to Bar Height" width="450"/>
+
+Surprise, for vertical bars, check `Vertical`. You'll likely want to set `Wrap` to `Left` or `Right`, so your bars show up next to each other:
+
+<img src="images/auras-bars-basic-vertical.png" alt="Basic vertical bar-style anchor setup" width="250"/>
+
+<img src="images/auras-size-vertical.png" alt="Size for vertical bars is tied to Bar Width" width="450"/>
+
+There's some more things you can do with these bars, though.
+First, let's look at `Invert`. Per default, your bars start out full and empties over time. Using invert, the opposite is true:
+
+<img src="images/auras-bars-invert.png" alt="Inverted Aura Bars" width="500"/>
+
+Instead of inverting the bar, you can also flip it horizontally (or vertically for a vertical setup, of course) using `Turn Axis`:
+
+<img src="images/auras-bars-turn-axis.png" alt="Inverted Aura Bars" width="500"/>
+
+Combinations of these options are, of course, also possible, so have fun experimenting!
 
 
 ## Global Defaults: Colors → Auras
 
 <!--hier fehlt noch fast alles-->
 
-What's in these filters is taken care of by Blizzard. In Midnight, they work mostly as you'd expect. In Forever, a lot of things aren't really sorted into categories by Blizz, making debuff filtering a bit of a headache.
+
 
 <u>Order of Precedence:</u>
 
